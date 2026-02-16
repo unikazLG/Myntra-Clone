@@ -7,9 +7,17 @@
 </head>
   <body>
      <button id="mybtn">click me</button>
+    <script>
+       let buttonElement= document.querySelector('#mybtn');
+       buttonElement.addEventListener(`click`,event=>{console.log('i am clicked')});
+       let printDate=event=>console.log(new Date());
+       buttonElement.addEventListener('click',printDate);
+       buttonElement.removeEventListener('click',printDate);
+    </script>
     
 </body>
 </html>
+
 
 
 
